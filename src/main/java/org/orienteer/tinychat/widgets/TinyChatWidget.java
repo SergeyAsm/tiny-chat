@@ -1,4 +1,4 @@
-package org.orienteer.tiny_chat.widgets;
+package org.orienteer.tinychat.widgets;
 
 import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.html.form.Form;
@@ -19,7 +19,7 @@ import ru.ydn.wicket.wicketorientdb.model.OQueryModel;
 
 
 	
-@Widget(domain="schema", tab="Chat", id="tiny-chat-widget", autoEnable=true)
+@Widget(domain="browse",selector="OUser", tab="Chat", id="tiny-chat-widget", autoEnable=true)
 public class TinyChatWidget extends AbstractWidget<Void> {
 
     public TinyChatWidget(String id, IModel<Void> model, IModel<ODocument> widgetDocumentModel) {

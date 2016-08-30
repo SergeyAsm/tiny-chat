@@ -1,8 +1,9 @@
-package org.orienteer.tiny_chat;
+package org.orienteer.tinychat;
 
 import org.orienteer.junit.OrienteerTestRunner;
 
 import org.orienteer.junit.OrienteerTester;
+import org.orienteer.tinychat.MyWebApplication;
 
 import static org.junit.Assert.*;
 import org.junit.Test;

@@ -1,8 +1,7 @@
-package org.orienteer.tiny_chat;
+package org.orienteer.tinychat;
 
 import org.orienteer.core.OrienteerWebApplication;
 import org.orienteer.core.module.PerspectivesModule;
-import org.orienteer.tiny_chat.widgets.TinyChatWidgetInstallator;
 
 public class MyWebApplication extends OrienteerWebApplication
 {
@@ -10,9 +9,8 @@ public class MyWebApplication extends OrienteerWebApplication
 	public void init()
 	{
 		super.init();
-		mountPages("org.orienteer.tiny_chat.web");
+		mountPages("org.orienteer.tinychat.web");
 		registerModule(DataModel.class);
-		registerWidgets("org.orienteer.tiny_chat.widgets");
 	}
 	
 }
