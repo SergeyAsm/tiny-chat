@@ -7,6 +7,8 @@ import org.orienteer.core.util.OSchemaHelper;
 
 import com.orientechnologies.orient.core.db.document.ODatabaseDocument;
 import com.orientechnologies.orient.core.record.impl.ODocument;
+import com.orientechnologies.orient.core.metadata.schema.OClass;
+import com.orientechnologies.orient.core.metadata.schema.OSchema;
 import com.orientechnologies.orient.core.metadata.schema.OType;
 
 public class DataModel extends AbstractOrienteerModule{
@@ -19,8 +21,11 @@ public class DataModel extends AbstractOrienteerModule{
 	public ODocument onInstall(OrienteerWebApplication app, ODatabaseDocument db) {
 		super.onInstall(app, db);
 		OSchemaHelper helper = OSchemaHelper.bind(db);
+
 		//Install data model
-		//Return null of default OModule is enough
+		if (! helper.existsClass("Message")){
+			helper.oClass("Message","").oProperty("messageText", OType.STRING);
+		}
 		return null;
 	}
 	

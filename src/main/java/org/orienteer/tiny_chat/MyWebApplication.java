@@ -13,8 +13,6 @@ public class MyWebApplication extends OrienteerWebApplication
 		mountPages("org.orienteer.tiny_chat.web");
 		registerModule(DataModel.class);
 		registerWidgets("org.orienteer.tiny_chat.widgets");
-		getApplicationListeners().add(new TinyChatWidgetInstallator());
-
 	}
 	
 }
